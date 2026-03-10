@@ -35,6 +35,14 @@ public class PlayerInputHandler : MonoBehaviour
         sprintAction = mapReference.FindAction(sprint);
     }
 
+    private void SubscribeActionValuesToInputEvents()
+    {
+        movementAction.performed += inputInfo => MovementInput = inputInfo.ReadValue<Vector2>();
+        movementAction.canceled += inputInfo => MovementInput = Vector2.zero;
+
+        rotationAction.performed += inputInfor
+    }
+
 
 
 
