@@ -83,7 +83,10 @@ public class PauseMenu : MonoBehaviour{
       * Postcon: Main menu scene is loaded.
       */
     public void loadMenu(){
-        Time.timeScale = 1f; // ensure time scale is reset to 1 before loading the menu
+        pauseMenuUI.SetActive(false); //deactivate the pause menu UI
+        Time.timeScale = 1f; //set the time scale to 1 to resume the game
+        gameIsPaused = false; //update the gameIsPaused variable
+        playerInputHandler.SetActive(true); // enable player input while paused
         SceneManager.LoadScene("MainMenu");  // load the main menu scene
         
 
