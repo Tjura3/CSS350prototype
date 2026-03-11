@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Kenji/kenjiScene.unity
+    path: Assets/Kenji/mainMenu.unity
     guid: 1ab3cf84ccf52cb4da50ec0a58170525
   - enabled: 1
     path: Assets/Thomas/thomasScene.unity
