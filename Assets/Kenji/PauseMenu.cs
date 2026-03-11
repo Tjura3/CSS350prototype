@@ -17,6 +17,8 @@ public class PauseMenu : MonoBehaviour{
         //Debug.Log("ran this");
         
     }
+
+
     void Start(){
         //playerInputHandler.SetActive(true); // ensure player input is enabled at the start of the game
         Debug.Log("ran this");
@@ -81,7 +83,10 @@ public class PauseMenu : MonoBehaviour{
       * Postcon: Main menu scene is loaded.
       */
     public void loadMenu(){
-        SceneManager.LoadScene("mainMenu");  // load the main menu scene
+        Time.timeScale = 1f; // ensure time scale is reset to 1 before loading the menu
+        SceneManager.LoadScene("MainMenu");  // load the main menu scene
+        
+
     }
 
     /** quitGame()
