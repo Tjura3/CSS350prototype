@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
@@ -11,10 +12,19 @@ public class PauseMenu : MonoBehaviour{
 
     public GameObject playerInputHandler;  // reference to the player input handler
 
-
+    private void Awake()
+    {
+        //Debug.Log("ran this");
+        
+    }
     void Start(){
-        playerInputHandler.SetActive(true); // ensure player input is enabled at the start of the game
-
+        //playerInputHandler.SetActive(true); // ensure player input is enabled at the start of the game
+        Debug.Log("ran this");
+        if (playerInputHandler == null)
+        {
+            playerInputHandler = GameObject.FindGameObjectWithTag("Player");
+            
+        }
     }
 
 
@@ -56,11 +66,12 @@ public class PauseMenu : MonoBehaviour{
      */
     void Pause(){
         pauseMenuUI.SetActive(true);  //activate the pause menu UI
+        playerInputHandler.SetActive(false); // disable player input while paused
         Time.timeScale = 0f; //set the time scale to 0 to pause the game
         gameIsPaused = true; //update the gameIsPaused variable
         Cursor.lockState = CursorLockMode.None;  // free cursor
         Cursor.visible = true;  // show cursor
-        playerInputHandler.SetActive(false); // disable player input while paused
+        
     }
 
 
