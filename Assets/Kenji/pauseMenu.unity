@@ -1560,7 +1560,6 @@ GameObject:
   - component: {fileID: 1027493445}
   - component: {fileID: 1027493448}
   - component: {fileID: 1027493447}
-  - component: {fileID: 1027493449}
   m_Layer: 5
   m_Name: Pause menu
   m_TagString: Untagged
@@ -1628,20 +1627,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1027493444}
   m_CullTransparentMesh: 1
---- !u!114 &1027493449
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1027493444}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1ad481dac3d4d9d49a84ebe4f426150d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PauseMenu
-  pauseMenuUI: {fileID: 1027493444}
-  playerInputHandler: {fileID: 1971158413}
 --- !u!1 &1125766572
 GameObject:
   m_ObjectHideFlags: 0
@@ -1870,7 +1855,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   pauseMenuUI: {fileID: 1027493444}
-  playerInputHandler: {fileID: 0}
+  pInHandler: {fileID: 1971158413}
 --- !u!1 &1286021852
 GameObject:
   m_ObjectHideFlags: 0
@@ -2848,6 +2833,10 @@ PrefabInstance:
     - target: {fileID: 1151972389478213560, guid: 321af492a12a8b1449441b58695a2dec, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3653936594290940276, guid: 321af492a12a8b1449441b58695a2dec, type: 3}
+      propertyPath: m_TagString
+      value: GameController
       objectReference: {fileID: 0}
     - target: {fileID: 8571090309126954775, guid: 321af492a12a8b1449441b58695a2dec, type: 3}
       propertyPath: m_Name

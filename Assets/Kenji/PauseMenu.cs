@@ -10,23 +10,13 @@ public class PauseMenu : MonoBehaviour{
 
     public GameObject pauseMenuUI;
 
-    public GameObject playerInputHandler;  // reference to the player input handler
-
-    private void Awake()
-    {
-        //Debug.Log("ran this");
-        
-    }
-
-
+    [SerializeField] GameObject pInHandler;  // reference to the player input handler
     void Start(){
-        //playerInputHandler.SetActive(true); // ensure player input is enabled at the start of the game
-        Debug.Log("ran this");
-        if (playerInputHandler == null)
-        {
-            playerInputHandler = GameObject.FindGameObjectWithTag("Player");
-            
-        }
+        //if (pInHandler == null)
+        //{
+        //    pInHandler = GameObject.FindGameObjectWithTag("GameController");
+
+        //}
     }
 
 
@@ -57,7 +47,7 @@ public class PauseMenu : MonoBehaviour{
         gameIsPaused = false; //update the gameIsPaused variable
         Cursor.lockState = CursorLockMode.Locked;  // lock cursor back
         Cursor.visible = false;  // hide cursor
-        playerInputHandler.SetActive(true); // enable player input while paused
+        pInHandler.SetActive(true); // enable player input while paused
      }
 
 
@@ -68,7 +58,7 @@ public class PauseMenu : MonoBehaviour{
      */
     void Pause(){
         pauseMenuUI.SetActive(true);  //activate the pause menu UI
-        playerInputHandler.SetActive(false); // disable player input while paused
+        pInHandler.SetActive(false); // disable player input while paused
         Time.timeScale = 0f; //set the time scale to 0 to pause the game
         gameIsPaused = true; //update the gameIsPaused variable
         Cursor.lockState = CursorLockMode.None;  // free cursor
@@ -86,7 +76,7 @@ public class PauseMenu : MonoBehaviour{
         pauseMenuUI.SetActive(false); //deactivate the pause menu UI
         Time.timeScale = 1f; //set the time scale to 1 to resume the game
         gameIsPaused = false; //update the gameIsPaused variable
-        playerInputHandler.SetActive(true); // enable player input while paused
+        pInHandler.SetActive(true); // enable player input while paused
         SceneManager.LoadScene("MainMenu");  // load the main menu scene
         
 

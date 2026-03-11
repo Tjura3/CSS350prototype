@@ -9,6 +9,9 @@ EditorBuildSettings:
     path: Assets/Kenji/mainMenu.unity
     guid: 1ab3cf84ccf52cb4da50ec0a58170525
   - enabled: 1
+    path: Assets/Kenji/pauseMenu.unity
+    guid: 78d3710c457676e4aba75375ca9b7491
+  - enabled: 1
     path: Assets/Thomas/thomasScene.unity
     guid: db675b59cff4f9f43b4acc67693d79eb
   m_configObjects:
