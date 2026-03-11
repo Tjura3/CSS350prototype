@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour{
 
@@ -13,6 +14,7 @@ public class PauseMenu : MonoBehaviour{
 
     void Start(){
         playerInputHandler.SetActive(true); // ensure player input is enabled at the start of the game
+
     }
 
 
@@ -68,7 +70,7 @@ public class PauseMenu : MonoBehaviour{
       * Postcon: Main menu scene is loaded.
       */
     public void loadMenu(){
-        Debug.Log("Loading menu...");
+        SceneManager.LoadScene("mainMenu");  // load the main menu scene
     }
 
     /** quitGame()
@@ -78,7 +80,7 @@ public class PauseMenu : MonoBehaviour{
       */
     public void quitGame(){
         Debug.Log("Quitting game...");
-        //Application.Quit();  // quit the application
+        Application.Quit();  // quit the application
     }
 
 
