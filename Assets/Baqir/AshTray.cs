@@ -2,14 +2,14 @@ using UnityEngine;
 
 namespace Baqir
 {
-    public class DeadBody : MonoBehaviour, IInteractable
+    public class AshTray : MonoBehaviour, IInteractable
     {
-        [SerializeField] private string dialogueText = "A lifeless body... looks like foul play.";
+        [SerializeField] private string dialogueText = "Recently used. The brand doesn't match the victims usual choice.";
         [SerializeField] private float interactRange = 3f;
 
         public void Interact()
         {
-            Debug.Log("Dead Body interacted with!");
+            Debug.Log("Ash Tray interacted with!");
             if (DialogueManager.Instance != null)
             {
                 if (DialogueManager.Instance.IsActive())
